@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	
+  <PageHeader></PageHeader>
+	
+	<main class='home-main'>
+		
+		<router-view></router-view>
+	</main>
+	
+  <PageFoot></PageFoot>
+  
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PageHeader from './common/PageHeader.vue'
+import PageFoot from './common/PageFoot.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PageHeader,PageFoot
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+	body,h1,h2,h3,h4,h5,li,a,ul{
+		margin:0;
+		padding: 0;
+		text-decoration: none;
+		list-style-type: none;
+	}
+	
+	body{
+		background-color: #e9eaec;
+		font-family: "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+	}
+	
+	#app {
+		position: relative;
+	}
+	
+	.home-main{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 90px;
+		min-width: 1170px;
+		padding: 0 20%;
+		box-sizing: border-box;
+		margin-bottom: 80px;
+	}
+	
 </style>
